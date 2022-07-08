@@ -2,40 +2,41 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-}
-
-a{
     text-decoration: none;
+    list-style: none;
+    color: var(--darkbuttoncolor);
+    
 }
-
 html{
-    /*variáveis*/
-    --bg-color:#f0f8ff;
-    --text-color:  #2c577a;
-    --primary-color: #2c577a;
-    --primary-color-dark: #216d83;
+    background-image: var(--mainbackground);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    font-family: 'Roboto', sans-serif;
+}
+ /*variáveis para temas*/
+
+body.whitetheme{
+    --mainbackground: url("https://raw.githubusercontent.com/FlaviaDuarte/Linktree/main/fundo.jpg");
+    --maintext-color: #dedfdf;
+    --borderpicturecolor: #62b8b3;
+    --buttoncolor: #62b8b3;
+    --darkbuttoncolor: rgb(57, 151, 163);
 }
 
-body.dark{
-    --bg-color:  #0e2a31;
-    --text-color: #f0f8ff;
-    --primary-color:  #216d83;
-    --primary-color-dark: #2c577a;
+body.darktheme{
+    --mainbackground: url("https://github.com/FlaviaDuarte/Linktree/blob/9b36527435ebbe598c6e6f6195214da66b30cab9/fundo.jpg");
+    --maintext-color: #f0f8ff ;
+    --borderpicturecolor:  #f0f8ff;
+    --buttoncolor:#f0f8ff;
+    --darkbuttoncolor: #2c577a;
 }
 
 body.terra{
-    --bg-color: #eeac9e;
-    --text-color: #b7410e;
-    --primary-color: #92340b;
-    --primary-color-dark: #752a09;
-}
-
-body{
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: 'Roboto', sans-serif;
-    
+    --mainbackground: #eeac9e;
+    --maintext-color: #b7410e;
+    --borderpicturecolor:  #b7410e;
+    --buttoncolor:#b7410e;
+    --darkbuttoncolor: #752a09;
 }
 
 .container{
@@ -50,16 +51,25 @@ img.avatar{
     height: 150px;
     width: 150;
     padding: 3.7px;
-    border: var(--primary-color) solid 4px ; 
+    border: var(--buttoncolor) solid 4px; 
 }
 
+.icon {
+    max-width: 30px;
+    max-height: 30px;
+    margin: 5px;
+}
+.iconl {
+    max-width: 25px;
+    max-height: 25px;
+    margin: 5px;
+}
 h1 {
     font-size: 32px;
     margin-top: 24px;
     margin-bottom: 8px;
   
 }
-
 .username{
     font-family: 'Roboto Mono', monospace;
     font-weight: 400;
@@ -73,12 +83,13 @@ ul {
 }
 
 ul li a {
+    
     height: 53px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--primary-color);
-    color: white;
+    background: var(--buttoncolor);
+    color: var(--maintext-color);
     text-transform: uppercase;
     font-size: 14px;
 
@@ -89,7 +100,7 @@ ul li a {
 }
 
 ul li a:hover {
-    background: var(--primary-color-dark);
+    background: var(--darkbuttoncolor);
 }
 
 footer{
@@ -104,5 +115,5 @@ footer:hover {
 }
 
 footer a {
-    color: var(--text-color);
+    color: var(--darkbuttoncolor);
 }
